@@ -1,3 +1,18 @@
+/* Adorno visual no header */
+.adorno {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.adorno span {
+    font-size: 3rem;
+    background: linear-gradient(90deg, #fc5c7d 0%, #6a82fb 100%);
+    border-radius: 50%;
+    padding: 0.5rem 1rem;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
