@@ -1,3 +1,113 @@
+/* Barra de navegação */
+.navbar {
+    width: 100%;
+    background: #6a82fb;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 1rem 0;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+.navbar a:hover {
+    color: #fc5c7d;
+}
+
+/* Introdução */
+.intro {
+    background: rgba(255,255,255,0.7);
+    margin: 2rem auto 0 auto;
+    max-width: 700px;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    padding: 1.5rem 2rem;
+    text-align: center;
+    transition: box-shadow 0.3s;
+}
+.intro:hover {
+    box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+}
+
+.card {
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.13);
+    padding: 2rem;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    transition: transform 0.3s cubic-bezier(.68,-0.55,.27,1.55), box-shadow 0.3s;
+    position: relative;
+}
+.card:hover {
+    transform: translateY(-12px) scale(1.05) rotate(-2deg);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+.icon {
+    font-size: 2rem;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+    transition: transform 0.3s;
+}
+.card:hover .icon {
+    transform: scale(1.2) rotate(-10deg);
+}
+
+/* Botão voltar ao topo */
+#topBtn {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    background: #fc5c7d;
+    color: white;
+    border-radius: 50%;
+    padding: 1rem 1.2rem;
+    font-size: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+    transition: background 0.3s, transform 0.3s;
+    display: none;
+}
+#topBtn.show {
+    display: inline-block;
+}
+
+@media (max-width: 700px) {
+    main {
+        padding: 1rem 0.5rem;
+    }
+    .card {
+        max-width: 98vw;
+        padding: 1rem;
+    }
+    .intro {
+        padding: 1rem 0.5rem;
+    }
+    .navbar ul {
+        gap: 1rem;
+    }
+    .adorno span {
+        font-size: 2rem;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+}
 /* Adorno visual no header */
 .adorno {
     display: flex;
@@ -12,10 +122,16 @@
     padding: 0.5rem 1rem;
     color: white;
     box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    display: inline-block;
+    transition: transform 0.4s cubic-bezier(.68,-0.55,.27,1.55);
+}
+.adorno span:hover {
+    transform: rotate(20deg) scale(1.15);
 }
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    background: linear-gradient(135deg, #fc5c7d 0%, #6a82fb 50%, #8ec5fc 100%);
+    min-height: 100vh;
     margin: 0;
     padding: 0;
 }
@@ -46,8 +162,12 @@ main {
     transition: transform 0.2s;
 }
 
+.card {
+    transition: transform 0.3s cubic-bezier(.68,-0.55,.27,1.55), box-shadow 0.3s;
+}
 .card:hover {
-    transform: translateY(-8px) scale(1.03);
+    transform: translateY(-12px) scale(1.05) rotate(-2deg);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
 }
 
 h1, h2 {

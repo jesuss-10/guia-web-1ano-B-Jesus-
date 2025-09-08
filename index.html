@@ -7,6 +7,13 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+	<nav class="navbar">
+		<ul>
+			<li><a href="#html">HTML</a></li>
+			<li><a href="#css">CSS</a></li>
+			<li><a href="#js">JavaScript</a></li>
+		</ul>
+	</nav>
 	<header>
 		<div class="adorno">
 			<span>🌐</span>
@@ -14,9 +21,13 @@
 		<h1>HTML, CSS e JavaScript</h1>
 		<p>Conheça as principais tecnologias para criar sites!</p>
 	</header>
+	<section class="intro">
+		<h2>Curiosidade sobre Web</h2>
+		<p>A web foi criada em 1989 por Tim Berners-Lee e revolucionou a forma como compartilhamos informações. Hoje, HTML, CSS e JavaScript são essenciais para qualquer site moderno!</p>
+	</section>
 	<main>
-		<section class="card">
-			<h2>HTML</h2>
+		<section class="card" id="html">
+			<h2><span class="icon">📄</span> HTML</h2>
 			<p>
 				HTML (HyperText Markup Language) é a linguagem usada para estruturar o conteúdo das páginas web, como títulos, textos, imagens e links. Com HTML, você organiza as informações em diferentes partes da página, como cabeçalhos, listas, tabelas e formulários. É a base de todo site, pois define o que será exibido para o usuário.
 			</p>
@@ -24,8 +35,8 @@
 				Os navegadores interpretam o HTML para mostrar o conteúdo de forma organizada. Sem HTML, não seria possível criar páginas na internet.
 			</p>
 		</section>
-		<section class="card">
-			<h2>CSS</h2>
+		<section class="card" id="css">
+			<h2><span class="icon">🎨</span> CSS</h2>
 			<p>
 				CSS (Cascading Style Sheets) é a linguagem utilizada para definir o estilo e o visual das páginas web, como cores, fontes e espaçamentos. O CSS permite deixar o site mais bonito, moderno e agradável para o usuário, além de possibilitar a criação de layouts responsivos que se adaptam a diferentes tamanhos de tela.
 			</p>
@@ -33,8 +44,8 @@
 				Com CSS, você pode criar animações, efeitos de transição, personalizar botões, menus e muito mais. Ele trabalha junto com o HTML para transformar o conteúdo em uma experiência visual atraente.
 			</p>
 		</section>
-		<section class="card">
-			<h2>JavaScript</h2>
+		<section class="card" id="js">
+			<h2><span class="icon">⚡</span> JavaScript</h2>
 			<p>
 				JavaScript é a linguagem de programação que permite adicionar interatividade e dinamismo às páginas web. Com JavaScript, é possível criar ações que respondem ao clique do usuário, validar formulários, atualizar informações sem recarregar a página e criar animações.
 			</p>
@@ -45,6 +56,7 @@
 	</main>
 	<footer>
 		<p>Site criado para explicar as tecnologias web &copy; 2025</p>
+		<button id="topBtn" title="Voltar ao topo">⬆️ Topo</button>
 	</footer>
 	<script src="script.js"></script>
 </body>
